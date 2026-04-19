@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Diya — B.Tech CSE Student at Gautam Buddha University. Exploring AI, Data Science, Robotics, and Embedded Systems." />
+  <title>Diya · Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══ CURSOR GLOW ═══ -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-d">D</span><span class="nav__logo-rest">iya</span>
+        <span class="nav__logo-dot"></span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#education" class="nav__link">Education</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#interests" class="nav__link">Interests</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="hero">
+    <canvas class="hero__canvas" id="heroCanvas"></canvas>
+
+    <div class="hero__ambient hero__ambient--1"></div>
+    <div class="hero__ambient hero__ambient--2"></div>
+    <div class="hero__ambient hero__ambient--3"></div>
+
+    <div class="hero__content">
+      <div class="hero__tag">
+        <span class="hero__tag-dot"></span>
+        <span class="font-orbit">B.Tech CSE · GBU, Greater Noida</span>
+      </div>
+
+      <h1 class="hero__headline">
+        <span class="hero__line hero__line--1">Building at the</span>
+        <span class="hero__line hero__line--2">Edge of <em class="hero__accent">Intelligence</em></span>
+      </h1>
+
+      <p class="hero__sub">
+        I'm <strong>Diya</strong> — a Computer Science undergraduate weaving together
+        <span class="hero__pill">AI</span>
+        <span class="hero__pill">Data Science</span>
+        <span class="hero__pill">Robotics</span>
+        <span class="hero__pill">Embedded Systems</span>
+        and
+        <span class="hero__pill">Web Development</span>
+        into systems that think, sense, and act.
+      </p>
+
+      <div class="hero__ctas">
+        <a href="#projects" class="btn btn--primary">
+          <span>View Projects</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#contact" class="btn btn--ghost">Contact Me</a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-num font-orbit" data-target="5">0</span>
+          <span class="hero__stat-label">Focus Areas</span>
+        </div>
+        <div class="hero__stat-sep"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num font-orbit" data-target="10">0</span>
+          <span class="hero__stat-label">Technologies</span>
+        </div>
+        <div class="hero__stat-sep"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num font-orbit" data-target="4">0</span>
+          <span class="hero__stat-label">Projects</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__visual">
+      <!-- 3D Orb Ring -->
+      <div class="orb-scene">
+        <div class="orb-ring orb-ring--1"></div>
+        <div class="orb-ring orb-ring--2"></div>
+        <div class="orb-ring orb-ring--3"></div>
+        <div class="orb-core">
+          <div class="orb-core__inner"></div>
+          <div class="orb-core__pulse"></div>
+        </div>
+        <div class="orb-orbit">
+          <div class="orb-satellite orb-satellite--1">
+            <span class="font-orbit">AI</span>
+          </div>
+        </div>
+        <div class="orb-orbit orb-orbit--2">
+          <div class="orb-satellite orb-satellite--2">
+            <span class="font-orbit">IoT</span>
+          </div>
+        </div>
+        <div class="orb-orbit orb-orbit--3">
+          <div class="orb-satellite orb-satellite--3">
+            <span class="font-orbit">WEB</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating Glass Cards -->
+      <div class="float-card float-card--a" data-float="0">
+        <div class="float-card__icon">🤖</div>
+        <div class="float-card__text">Machine Learning</div>
+      </div>
+      <div class="float-card float-card--b" data-float="1">
+        <div class="float-card__icon">📡</div>
+        <div class="float-card__text">Embedded Systems</div>
+      </div>
+      <div class="float-card float-card--c" data-float="2">
+        <div class="float-card__icon">📊</div>
+        <div class="float-card__text">Data Science</div>
+      </div>
+    </div>
+
+    <div class="hero__scroll-hint">
+      <div class="hero__scroll-line"></div>
+      <span class="font-orbit">scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="section-label__num font-orbit">01</span>
+        <span class="section-label__text">About Me</span>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <h2 class="section-title">
+            Where <em>hardware</em> meets<br/>
+            <em>intelligence</em>
+          </h2>
+          <p class="about__para">
+            I'm a first-year B.Tech Computer Science student at Gautam Buddha University, Greater Noida, with a deep fascination for systems that exist at the crossroads of software and the physical world. My work spans from training machine learning models to programming microcontrollers — because I believe the most compelling technology is the kind you can both see and touch.
+          </p>
+          <p class="about__para">
+            I'm drawn to questions like: how do robots perceive and navigate space? How can data science reveal patterns invisible to the human eye? How do we build interfaces that feel inevitable? These questions drive me to learn continuously, build experimentally, and iterate relentlessly.
+          </p>
+          <p class="about__para">
+            Currently exploring the overlaps between AI, robotics, and IoT — building a foundation to eventually create systems that are truly autonomous, adaptive, and impactful.
+          </p>
+          <div class="about__badges">
+            <span class="badge">Ambitious Learner</span>
+            <span class="badge">Problem Solver</span>
+            <span class="badge">Builder Mindset</span>
+            <span class="badge">Open Source Curious</span>
+          </div>
+        </div>
+
+        <div class="about__card-wrap reveal reveal--right">
+          <div class="about__id-card glass-panel">
+            <div class="about__id-header">
+              <div class="about__avatar">
+                <div class="about__avatar-inner">D</div>
+                <div class="about__avatar-ring"></div>
+              </div>
+              <div>
+                <div class="about__name">Diya</div>
+                <div class="about__role font-orbit">CS Undergraduate</div>
+              </div>
+            </div>
+            <hr class="about__divider" />
+            <div class="about__id-rows">
+              <div class="about__id-row">
+                <span class="about__id-key">Degree</span>
+                <span class="about__id-val">B.Tech CSE</span>
+              </div>
+              <div class="about__id-row">
+                <span class="about__id-key">University</span>
+                <span class="about__id-val">GBU, Greater Noida</span>
+              </div>
+              <div class="about__id-row">
+                <span class="about__id-key">Focus</span>
+                <span class="about__id-val">AI · Robotics · IoT</span>
+              </div>
+              <div class="about__id-row">
+                <span class="about__id-key">Status</span>
+                <span class="about__id-val status-active">
+                  <span class="status-dot"></span> Open to opportunities
+                </span>
+              </div>
+            </div>
+            <div class="about__id-glow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EDUCATION ═══ -->
+  <section class="section education" id="education">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="section-label__num font-orbit">02</span>
+        <span class="section-label__text">Education</span>
+      </div>
+      <h2 class="section-title reveal">Academic <em>Journey</em></h2>
+
+      <div class="timeline">
+        <div class="timeline__line"></div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card glass-panel">
+            <div class="timeline__head">
+              <div class="timeline__icon">🎓</div>
+              <div class="timeline__meta">
+                <span class="timeline__year font-orbit">2024 – 2028</span>
+                <span class="timeline__status">Current</span>
+              </div>
+            </div>
+            <h3 class="timeline__title">Bachelor of Technology</h3>
+            <h4 class="timeline__sub">Computer Science & Engineering</h4>
+            <p class="timeline__inst">Gautam Buddha University, Greater Noida</p>
+            <p class="timeline__desc">
+              Pursuing a rigorous 4-year program spanning algorithms, systems programming, AI/ML, data structures, computer networks, and embedded systems. Actively working on projects that bridge theoretical CS concepts with real-world hardware and software systems.
+            </p>
+            <div class="timeline__tags">
+              <span class="tag">Algorithms</span>
+              <span class="tag">AI/ML</span>
+              <span class="tag">Embedded Systems</span>
+              <span class="tag">Data Structures</span>
+              <span class="tag">Computer Networks</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card glass-panel">
+            <div class="timeline__head">
+              <div class="timeline__icon">📚</div>
+              <div class="timeline__meta">
+                <span class="timeline__year font-orbit">– 2024</span>
+                <span class="timeline__status timeline__status--done">Completed</span>
+              </div>
+            </div>
+            <h3 class="timeline__title">Higher Secondary Education</h3>
+            <h4 class="timeline__sub">Science Stream · PCM + Computer Science</h4>
+            <p class="timeline__desc">
+              Strong foundation in mathematics, physics, and introductory programming — sparking curiosity for how computing and engineering can converge.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="section-label__num font-orbit">03</span>
+        <span class="section-label__text">Core Stack</span>
+      </div>
+      <h2 class="section-title reveal">Tools of <em>the Trade</em></h2>
+
+      <div class="skills__grid">
+
+        <div class="skill-group reveal glass-panel">
+          <div class="skill-group__header">
+            <span class="skill-group__icon">⚡</span>
+            <h3 class="skill-group__title">Programming</h3>
+          </div>
+          <div class="skill-chips">
+            <div class="skill-chip">
+              <span class="skill-chip__icon">🐍</span>
+              <span>Python</span>
+              <div class="skill-chip__bar"><div class="skill-chip__fill" style="--w:85%"></div></div>
+            </div>
+            <div class="skill-chip">
+              <span class="skill-chip__icon">⚙️</span>
+              <span>C</span>
+              <div class="skill-chip__bar"><div class="skill-chip__fill" style="--w:75%"></div></div>
+            </div>
+            <div class="skill-chip">
+              <span class="skill-chip__icon">🔩</span>
+              <span>C++</span>
+              <div class="skill-chip__bar"><div class="skill-chip__fill" style="--w:70%"></div></div>
+            </div>
+            <div class="skill-chip">
+              <span class="skill-chip__icon">✨</span>
+              <span>JavaScript</span>
+              <div class="skill-chip__bar"><div class="skill-chip__fill" style="--w:72%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal glass-panel" style="--delay:100ms">
+          <div class="skill-group__header">
+            <span class="skill-group__icon">🌐</span>
+            <h3 class="skill-group__title">Web Development</h3>
+          </div>
+          <div class="skill-chips">
+            <div class="skill-chip">
+              <span class="skill-chip__icon">🏗️</span>
+              <span>HTML5</span>
+              <div class="skill-chip__bar"><div class="skill-chip__fill" style="--w:88%"></div></div>
+            </div>
+            <div class="skill-chip">
+              <span class="skill-chip__icon">🎨</span>
+              <span>CSS3</span>
+              <div class="skill-chip__bar"><div class="skill-chip__fill" style="--w:82%"></div></div>
+            </div>
+            <div class="skill-chip">
+              <span class="skill-chip__icon">⚡</span>
+              <span>JavaScript</span>
+              <div class="skill-chip__bar"><div class="skill-chip__fill" style="--w:72%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal glass-panel" style="--delay:200ms">
+          <div class="skill-group__header">
+            <span class="skill-group__icon">🧠</span>
+            <h3 class="skill-group__title">AI &amp; Data Science</h3>
+          </div>
+          <div class="skill-chips">
+            <div class="skill-chip">
+              <span class="skill-chip__icon">📐</span>
+              <span>NumPy</span>
+              <div class="skill-chip__bar"><div class="skill-chip__fill" style="--w:78%"></div></div>
+            </div>
+            <div class="skill-chip">
+              <span class="skill-chip__icon">🐼</span>
+              <span>Pandas</span>
+              <div class="skill-chip__bar"><div class="skill-chip__fill" style="--w:76%"></div></div>
+            </div>
+            <div class="skill-chip">
+              <span class="skill-chip__icon">📈</span>
+              <span>Matplotlib</span>
+              <div class="skill-chip__bar"><div class="skill-chip__fill" style="--w:74%"></div></div>
+            </div>
+            <div class="skill-chip">
+              <span class="skill-chip__icon">🤖</span>
+              <span>Scikit-learn</span>
+              <div class="skill-chip__bar"><div class="skill-chip__fill" style="--w:65%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal glass-panel" style="--delay:300ms">
+          <div class="skill-group__header">
+            <span class="skill-group__icon">🔌</span>
+            <h3 class="skill-group__title">Embedded &amp; IoT</h3>
+          </div>
+          <div class="skill-chips">
+            <div class="skill-chip">
+              <span class="skill-chip__icon">🔴</span>
+              <span>Arduino</span>
+              <div class="skill-chip__bar"><div class="skill-chip__fill" style="--w:80%"></div></div>
+            </div>
+            <div class="skill-chip">
+              <span class="skill-chip__icon">📡</span>
+              <span>Sensors &amp; Actuators</span>
+              <div class="skill-chip__bar"><div class="skill-chip__fill" style="--w:72%"></div></div>
+            </div>
+            <div class="skill-chip">
+              <span class="skill-chip__icon">🧮</span>
+              <span>Microcontrollers</span>
+              <div class="skill-chip__bar"><div class="skill-chip__fill" style="--w:68%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group skill-group--tools reveal glass-panel" style="--delay:400ms">
+          <div class="skill-group__header">
+            <span class="skill-group__icon">🛠️</span>
+            <h3 class="skill-group__title">Tools &amp; Workflow</h3>
+          </div>
+          <div class="skill-badges">
+            <span class="sbadge">Git</span>
+            <span class="sbadge">GitHub</span>
+            <span class="sbadge">VS Code</span>
+            <span class="sbadge">Jupyter</span>
+            <span class="sbadge">Linux CLI</span>
+            <span class="sbadge">Figma</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="section-label__num font-orbit">04</span>
+        <span class="section-label__text">Projects</span>
+      </div>
+      <h2 class="section-title reveal">Things I've <em>Built</em></h2>
+      <p class="section-sub reveal">A snapshot of my current explorations — each project is a step toward something larger.</p>
+
+      <div class="projects__grid">
+
+        <div class="project-card reveal glass-panel" data-tilt>
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__num font-orbit">01</span>
+            <div class="project-card__tags">
+              <span class="tag tag--accent">ML</span>
+              <span class="tag">Python</span>
+            </div>
+          </div>
+          <div class="project-card__icon-wrap">
+            <span class="project-card__icon">🧠</span>
+          </div>
+          <h3 class="project-card__title">Sentiment Analysis Engine</h3>
+          <p class="project-card__desc">
+            A text classification model using Scikit-learn and NLTK to predict sentiment polarity in product reviews. Preprocessed raw text data with tokenization, stopword removal, and TF-IDF vectorization — achieving over 85% accuracy on a benchmark dataset.
+          </p>
+          <div class="project-card__stack">
+            <span class="stack-pill">Python</span>
+            <span class="stack-pill">Scikit-learn</span>
+            <span class="stack-pill">NLTK</span>
+            <span class="stack-pill">Pandas</span>
+          </div>
+          <a href="#" class="project-card__link" aria-label="View project">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 14L14 4M14 4H7M14 4v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="project-card reveal glass-panel" style="--delay:100ms" data-tilt>
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__num font-orbit">02</span>
+            <div class="project-card__tags">
+              <span class="tag tag--accent">IoT</span>
+              <span class="tag">Arduino</span>
+            </div>
+          </div>
+          <div class="project-card__icon-wrap">
+            <span class="project-card__icon">🌡️</span>
+          </div>
+          <h3 class="project-card__title">Smart Environment Monitor</h3>
+          <p class="project-card__desc">
+            An Arduino-based embedded system that continuously reads temperature, humidity, and air quality via DHT22 and MQ-135 sensors. Data is displayed in real time on an OLED screen, with threshold-based alerts triggered via a buzzer and LED indicators.
+          </p>
+          <div class="project-card__stack">
+            <span class="stack-pill">Arduino</span>
+            <span class="stack-pill">C++</span>
+            <span class="stack-pill">DHT22</span>
+            <span class="stack-pill">OLED</span>
+          </div>
+          <a href="#" class="project-card__link" aria-label="View project">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 14L14 4M14 4H7M14 4v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="project-card reveal glass-panel" style="--delay:200ms" data-tilt>
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__num font-orbit">03</span>
+            <div class="project-card__tags">
+              <span class="tag tag--accent">Data</span>
+              <span class="tag">Visualization</span>
+            </div>
+          </div>
+          <div class="project-card__icon-wrap">
+            <span class="project-card__icon">📊</span>
+          </div>
+          <h3 class="project-card__title">COVID-19 Data Insights Dashboard</h3>
+          <p class="project-card__desc">
+            A Python-based exploratory data analysis project using Pandas and Matplotlib to visualize global pandemic trends. Includes time-series plots, correlation heatmaps, and geo-distribution charts from a public WHO dataset, surfacing key epidemiological patterns.
+          </p>
+          <div class="project-card__stack">
+            <span class="stack-pill">Python</span>
+            <span class="stack-pill">Pandas</span>
+            <span class="stack-pill">Matplotlib</span>
+            <span class="stack-pill">NumPy</span>
+          </div>
+          <a href="#" class="project-card__link" aria-label="View project">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 14L14 4M14 4H7M14 4v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="project-card reveal glass-panel" style="--delay:300ms" data-tilt>
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <span class="project-card__num font-orbit">04</span>
+            <div class="project-card__tags">
+              <span class="tag tag--accent">Robotics</span>
+              <span class="tag">Algorithm</span>
+            </div>
+          </div>
+          <div class="project-card__icon-wrap">
+            <span class="project-card__icon">🤖</span>
+          </div>
+          <h3 class="project-card__title">Maze-Solving Robot Simulation</h3>
+          <p class="project-card__desc">
+            A conceptual robotics project implementing the A* pathfinding algorithm in Python, simulating an autonomous agent navigating a dynamically generated grid maze. Visualizes the search frontier, optimal path, and dead ends in real time using Matplotlib animation.
+          </p>
+          <div class="project-card__stack">
+            <span class="stack-pill">Python</span>
+            <span class="stack-pill">A* Algorithm</span>
+            <span class="stack-pill">Matplotlib</span>
+          </div>
+          <a href="#" class="project-card__link" aria-label="View project">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 14L14 4M14 4H7M14 4v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ INTERESTS ═══ -->
+  <section class="section interests" id="interests">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="section-label__num font-orbit">05</span>
+        <span class="section-label__text">Interests</span>
+      </div>
+      <h2 class="section-title reveal">What Drives <em>Me</em></h2>
+
+      <div class="interests__grid">
+        <div class="interest-card reveal glass-panel" style="--delay:0ms">
+          <div class="interest-card__icon">🤖</div>
+          <h3 class="interest-card__title">Artificial Intelligence</h3>
+          <p class="interest-card__desc">Fascinated by how machines can learn, reason, and perceive — from classical ML to the principles behind modern neural architectures.</p>
+        </div>
+        <div class="interest-card reveal glass-panel" style="--delay:80ms">
+          <div class="interest-card__icon">📡</div>
+          <h3 class="interest-card__title">Robotics</h3>
+          <p class="interest-card__desc">Drawn to autonomous systems that interact with the physical world — sensing, planning, and acting with minimal human supervision.</p>
+        </div>
+        <div class="interest-card reveal glass-panel" style="--delay:160ms">
+          <div class="interest-card__icon">🔌</div>
+          <h3 class="interest-card__title">Embedded Systems</h3>
+          <p class="interest-card__desc">Love working with hardware close to the metal — microcontrollers, sensors, and circuits where every byte and clock cycle matters.</p>
+        </div>
+        <div class="interest-card reveal glass-panel" style="--delay:240ms">
+          <div class="interest-card__icon">📊</div>
+          <h3 class="interest-card__title">Data Science</h3>
+          <p class="interest-card__desc">Exploring the power of turning raw data into insight, prediction, and decision — particularly where data meets real-world impact.</p>
+        </div>
+        <div class="interest-card reveal glass-panel" style="--delay:320ms">
+          <div class="interest-card__icon">🌐</div>
+          <h3 class="interest-card__title">Web Development</h3>
+          <p class="interest-card__desc">Building interfaces that feel intuitive and alive — bridging beautiful design with functional, performant front-end engineering.</p>
+        </div>
+        <div class="interest-card reveal glass-panel" style="--delay:400ms">
+          <div class="interest-card__icon">🔭</div>
+          <h3 class="interest-card__title">Continuous Learning</h3>
+          <p class="interest-card__desc">Reading papers, following open-source projects, and tinkering with new tools — curiosity as a core operating principle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="section-label__num font-orbit">06</span>
+        <span class="section-label__text">Contact</span>
+      </div>
+      <h2 class="section-title reveal">Let's <em>Connect</em></h2>
+      <p class="section-sub reveal">Open to collaborations, mentorship, internships, and interesting conversations about AI and hardware.</p>
+
+      <div class="contact__grid">
+        <div class="contact__info reveal">
+          <div class="contact-item glass-panel">
+            <div class="contact-item__icon">✉️</div>
+            <div class="contact-item__body">
+              <span class="contact-item__label font-orbit">Email</span>
+              <a href="mailto:diyakri123@gmail.com" class="contact-item__val">diyakri123@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item glass-panel">
+            <div class="contact-item__icon">🔗</div>
+            <div class="contact-item__body">
+              <span class="contact-item__label font-orbit">LinkedIn</span>
+              <a href="#" class="contact-item__val">linkedin.com/in/diya</a>
+            </div>
+          </div>
+          <div class="contact-item glass-panel">
+            <div class="contact-item__icon">🐙</div>
+            <div class="contact-item__body">
+              <span class="contact-item__label font-orbit">GitHub</span>
+              <a href="#" class="contact-item__val">github.com/diya</a>
+            </div>
+          </div>
+          <div class="contact__availability">
+            <span class="avail-dot"></span>
+            <span>Available for internships &amp; collaborations</span>
+          </div>
+        </div>
+
+        <form class="contact__form reveal reveal--right glass-panel" id="contactForm" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="fname">Name</label>
+            <input class="form-input" type="text" id="fname" name="name" placeholder="Your name" autocomplete="name" />
+            <span class="form-error" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="femail">Email</label>
+            <input class="form-input" type="email" id="femail" name="email" placeholder="your@email.com" autocomplete="email" />
+            <span class="form-error" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="fmessage">Message</label>
+            <textarea class="form-input form-textarea" id="fmessage" name="message" placeholder="What's on your mind?" rows="5"></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+            <span class="submit-text">Send Message</span>
+            <svg class="submit-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M11 5l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <span>✅ Message sent — I'll be in touch soon!</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__name">Diya</span>
+          <span class="footer__tagline">Building at the edge of intelligence.</span>
+        </div>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="footer__copy">
+          <span class="font-orbit">© 2025 DIYA</span>
+          <span class="footer__sep">·</span>
+          <span>B.Tech CSE · GBU</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
